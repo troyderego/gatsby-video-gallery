@@ -97,3 +97,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+1. Create layout component src/components/layout.js
+2. Create global stylesheet at src/components/layout.css
+3. Add the layout component to each page with import Layout from "../components/layout" and wrap page content with <Layout></Layout>
+4. Create gatsby-browser.js and import Bootstrap import 'bootstrap/dist/css/bootstrap.min.css';
+
