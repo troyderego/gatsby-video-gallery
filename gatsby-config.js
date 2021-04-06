@@ -1,10 +1,17 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "Gatsby Youtube Video Gallery",
+    description: "A demo Gatsby site using gatsby-source-youtube-v3 to create a gallery from a Youtube channel."
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-youtube-v3`,
+      options: {
+        channelId: ['UCwa00H8uwTMyWPcbsjXdB9w'],
+        apiKey: 'AIzaSyC5v57cq-5eMDZkQ4NPvnfbBCkTNY9nvGg',
+        maxVideos: 50 // Defaults to 50
+      },
+    },
+
+  ],
 }
