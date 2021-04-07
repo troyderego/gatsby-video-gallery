@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
 import PropTypes from "prop-types"
+import Video from "../components/video"
+import { Container } from "react-bootstrap";
 
 class Post extends Component {
   render() {
@@ -8,8 +11,16 @@ class Post extends Component {
 
     return (
       <>
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <Layout>
+          <Container>
+            <h1>{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <Video
+              videoSrURL={"https://www.youtube.com/embed/" + post.videoId}
+              videoTitle={post.title}
+            />
+          </Container>
+        </Layout>
       </>
     )
   }
@@ -27,6 +38,7 @@ export const pageQuery = graphql`
     youtubeVideo(id: { eq: $id }) {
       title
       description
+      videoId
     }
   }
 `

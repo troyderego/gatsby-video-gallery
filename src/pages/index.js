@@ -1,30 +1,34 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
-import { Button, Container, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 
 export default function Home({ data }) {
   return (
     <Layout>
       <Container>
-        <h1>Gatsby Video Gallery</h1>
+        <h1>Gatsby Video Gallery ({data.allYoutubeVideo.totalCount})</h1>
       </Container>
       <Container>
-        <h2>Videos ({data.allYoutubeVideo.totalCount})</h2>
-
-        <ListGroup>
+        <Row>
           {data.allYoutubeVideo.edges.map(({ node }) => (
-            <ListGroupItem key={node.id}>
-            <div class="text-light small">{node.publishedAt}</div>
-            <h3>{node.title}</h3>
-            <div>
-                <Button variant="primary" href={"https://www.youtube.com/watch?v=" + node.videoId}>View <span class="sr-only">{node.title} </span>on Youtube</Button>{' '}
-            </div>
-            </ListGroupItem>
+            <Col md={4} className="mb-4">
+              <Link to={node.videoId} className="card-link">
+                <Card bg="dark" className="card-hover">
+                  <Card.Img variant="top" src={node.thumbnail.url} />
+                  <Card.Body>
+                    <Card.Title>{node.title}</Card.Title>
+                    <Card.Text>
+                      <div class="small">{node.publishedAt}</div>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </Col>
           ))}
 
-        </ListGroup>
+        </Row>
       </Container>
     </Layout>
   )
@@ -41,6 +45,9 @@ export const query = graphql`
           description
           videoId
           publishedAt(formatString: "DD MMMM, YYYY")
+          thumbnail {
+            url
+          }
         }
       }
     }

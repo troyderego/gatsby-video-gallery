@@ -1,6 +1,46 @@
 /* These are the styles for pages using the Layout componenent. */
 
 body {
-    background: #FBFBFB;
-    color: #121212;
-  }
+    background: hsl(0, 0%, 7%);
+    color: #15ff00;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+
+a .card.bg-dark {
+  text-decoration: none;
+  color: #15ff00;
+}
+a.card-link:hover {
+  text-decoration: none;
+}
+.card-hover {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.card-hover:hover {
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+  box-shadow: 0.25rem 0.25rem 1.5rem #15ff00;
+}
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
