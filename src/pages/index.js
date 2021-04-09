@@ -9,6 +9,7 @@ export default function Home({ data }) {
     <Layout>
       <Container>
         <h1>Gatsby Video Gallery ({data.allYoutubeVideo.totalCount})</h1>
+
         <p>This is a demonstration of the use of a source plugin with Gatsby to display items from a selected YouTube channel, create a list, and programatically create a page for each item.</p>
 
         <p>The benefit is that as soon as a new item is uploaded to the channel, it can appear here on the site.</p>

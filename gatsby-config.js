@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     siteMetadata: {
       title: "Gatsby Youtube Video Gallery",
@@ -8,7 +12,7 @@ module.exports = {
         resolve: `gatsby-source-youtube-v3`,
         options: {
           channelId: ['UCO2AwPJjrYzOm5i0MRLIIpQ'],
-          apiKey: 'AIzaSyC5v57cq-5eMDZkQ4NPvnfbBCkTNY9nvGg',
+          apiKey: process.env.GATSBY_MY_YOUTUBEAPI,
           maxVideos: 50 // Defaults to 50
         },
       },
