@@ -1,6 +1,3 @@
-# Site configurations including API keys
-gatsby-config.js
-
 # Logs
 logs
 *.log
