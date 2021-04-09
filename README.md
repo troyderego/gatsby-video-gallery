@@ -8,12 +8,16 @@
   Gatsby Video Gallery Demo
 </h1>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is a demonstration of the use of a source plugin with [Gatsby](https://www.gatsbyjs.com) to display items from a selected YouTube channel, create a list, and programatically create a page for each item.
+
+The benefit is that as soon as a new item is uploaded to the channel, it can appear here on the site. 
+
+Currently this plugin is only configured to connected to one or more channels. A great enhancement would be to add the ability to select a specific playlist.
 
 ## Plugins
 
-- **[gatsby-source-youtube-v3](https://www.gatsbyjs.com/plugins/gatsby-source-youtube-v3/?=youtube)
-- **[react-bootstrap](https://react-bootstrap.github.io)
+- [gatsby-source-youtube-v3](https://www.gatsbyjs.com/plugins/gatsby-source-youtube-v3/?=youtube)
+- [react-bootstrap](https://react-bootstrap.github.io)
 
 ## 💫 Deploy Locally
 1. Clone this repo
