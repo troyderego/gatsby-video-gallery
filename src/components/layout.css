@@ -2,7 +2,7 @@
 
 body {
     background: hsl(0, 0%, 7%);
-    color: #15ff00;
+    color: #ebebeb;
 }
 h1 {
   font-size: 1.5rem;
@@ -13,7 +13,7 @@ h2 {
 
 a .card.bg-dark {
   text-decoration: none;
-  color: #15ff00;
+  color: #ebebeb;
 }
 a.card-link:hover {
   text-decoration: none;
@@ -25,7 +25,7 @@ a.card-link:hover {
 .card-hover:hover {
   -webkit-transform: translateY(-20px);
   transform: translateY(-20px);
-  box-shadow: 0.25rem 0.25rem 1.5rem #15ff00;
+  box-shadow: 0.25rem 0.25rem 1.5rem #ebebeb;
 }
 .video {
   position: relative;
