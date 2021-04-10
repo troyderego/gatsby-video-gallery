@@ -21,8 +21,15 @@ Currently this plugin is only configured to connected to one or more channels. A
 
 ## 💫 Deploy Locally
 1. Clone this repo
-2. Rename `gatsby-config.js.template` to `gatsby-config.js`
-3. Add your site metadata.
-4. Add the desired YouTube Channel ID - [Find your YouTube user & channel IDs](https://support.google.com/youtube/answer/3250431?hl=en)
-5. Create and add a YouTube api key  - [how to create YouTube API Key 2021](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjLu4OjrfHvAhWaZM0KHd0sCS8QwqsBMAF6BAgTEBo&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3jZ5vnv-LZc&usg=AOvVaw1NnMpA_ozv868bawohH1Tk)
-6. Run `gatsby develop`
+2. CD in the the working directory and run `npm install`
+3. Create at the root called `evn.develop` and add your YouTube api key.
+    ```shell
+    # Inside .env.development
+    GATSBY_MY_YOUTUBEAPI="<<YOUTUBE API KEY>>"
+    ```
+
+3. Rename `gatsby-config.js.template` to `gatsby-config.js`
+4. Add your site metadata.
+5. Add the desired YouTube Channel ID - [Find your YouTube user & channel IDs](https://support.google.com/youtube/answer/3250431?hl=en)
+6. Create and add a YouTube api key  - [how to create YouTube API Key 2021](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjLu4OjrfHvAhWaZM0KHd0sCS8QwqsBMAF6BAgTEBo&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3jZ5vnv-LZc&usg=AOvVaw1NnMpA_ozv868bawohH1Tk)
+7. Run `gatsby develop`
