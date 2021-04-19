@@ -18,6 +18,9 @@ Currently this plugin is only configured to connected to one or more channels. A
 
 - [gatsby-source-youtube-v3](https://www.gatsbyjs.com/plugins/gatsby-source-youtube-v3/?=youtube)
 - [react-bootstrap](https://react-bootstrap.github.io)
+- [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/?=gatsby%20image)
+- [gatsby-plugin-sharp](https://www.gatsbyjs.com/plugins/gatsby-plugin-sharp/?=gatsby%20plugin%20shar)
+- [gatsby-transformer-sharp](https://www.gatsbyjs.com/plugins/gatsby-transformer-sharp/?=gatsby%20transformer%20shar)
 
 ## 💫 Deploy Locally
 1. Clone this repo
@@ -33,3 +36,6 @@ Currently this plugin is only configured to connected to one or more channels. A
 6. Add your site metadata.
 7. Add the desired YouTube Channel ID - [Find your YouTube user & channel IDs](https://support.google.com/youtube/answer/3250431?hl=en)
 8. Run `gatsby develop`
+
+## Updates
+- 04/19/2021 Added gatsby-plugin-image, gatsby-plugin-sharp, and gatsby-transormer-sharp to create nodes from image files from the data source and apply image processing.

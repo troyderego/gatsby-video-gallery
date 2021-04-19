@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Card, Container, Row, Col } from "react-bootstrap";
 
 export default function Home({ data }) {
@@ -18,16 +18,13 @@ export default function Home({ data }) {
       </Container>
       <Container>
         <Row>
-          {data.allYoutubeVideo.edges.map(({ node }) => (
+        {data.allYoutubeVideo.edges.map(({ node }) => (
             <Col md={4} className="mb-4">
               <Link to={node.videoId} className="card-link">
                 <Card bg="dark" className="card-hover">
-                  <Card.Img variant="top" src={node.thumbnail.url} />
-                  <Card.Body>
+                  <GatsbyImage className="card-img-top" image={node.localThumbnail.childImageSharp.gatsbyImageData} alt={node.title} />
+                  <Card.Body className="p-2">
                     <Card.Title>{node.title}</Card.Title>
-                    <Card.Text>
-                      <div class="small">{node.publishedAt}</div>
-                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Link>
@@ -51,8 +48,10 @@ export const query = graphql`
           description
           videoId
           publishedAt(formatString: "DD MMMM, YYYY")
-          thumbnail {
-            url
+          localThumbnail {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
           }
         }
       }

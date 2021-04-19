@@ -9,6 +9,16 @@ module.exports = {
     },
     plugins: [
       {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: `${__dirname}/src/images`
+        },
+      },
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+      {
         resolve: `gatsby-source-youtube-v3`,
         options: {
           channelId: ['UCO2AwPJjrYzOm5i0MRLIIpQ'],
