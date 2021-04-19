@@ -18,6 +18,7 @@ Currently this plugin is only configured to connected to one or more channels. A
 
 - [gatsby-source-youtube-v3](https://www.gatsbyjs.com/plugins/gatsby-source-youtube-v3/?=youtube)
 - [react-bootstrap](https://react-bootstrap.github.io)
+- [gatsby-source-filesystem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/?=gatsby%20filesys)
 - [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/?=gatsby%20image)
 - [gatsby-plugin-sharp](https://www.gatsbyjs.com/plugins/gatsby-plugin-sharp/?=gatsby%20plugin%20shar)
 - [gatsby-transformer-sharp](https://www.gatsbyjs.com/plugins/gatsby-transformer-sharp/?=gatsby%20transformer%20shar)
