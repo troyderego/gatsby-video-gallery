@@ -19,6 +19,8 @@ class Post extends Component {
               videoSrURL={"https://www.youtube.com/embed/" + post.videoId}
               videoTitle={post.title}
             />
+            <div class="script">{post.publishedAt}</div>
+            <div>{post.description}</div>
           </Container>
         </Layout>
       </>
@@ -39,6 +41,6 @@ export const pageQuery = graphql`
       title
       description
       videoId
-    }
+      publishedAt(formatString: "MMMM DD, YYYY")    }
   }
 `
